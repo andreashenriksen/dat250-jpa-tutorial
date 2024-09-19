@@ -4,7 +4,6 @@
 
 ## Table of Content
 - [JPA Installation](#jpa-installation)
-- [Test results](#test-results)
 - [Database inspection](#database-inspection)
 - [Pending issues](#pending-issues)
 
@@ -14,13 +13,6 @@ to run the program, where I forgot to initialize the Collections which led to Nu
 I also had some problem running the tests because it failed when trying to assert that a
 Collection contained a certain item. This is because it was comparing a mutable list with an immutable list. 
 I fixed this by changing the test (hope that's okay) by asserting that the ArrayList contained the item.  
-
-## Test results
-Below you can find the test results. I was unsure if we are supposed to show it in the repository or not,
-since the included github actions doesn't seem to work for me.
-  
-![Test result](test_result.png)
-You can find the code to the project [here](https://github.com/andreashenriksen/dat250-jpa-tutorial).
 
 ## Database inspection
 I inspected the database by using IntelliJ's plugin called **Database tools and SQL**.
@@ -102,5 +94,5 @@ foreign key (ADDRESS_ID) references CREDITCARD
 ```
 
 ## Pending issues
-I have not discovered any pending issues with this assignment aside. 
+I have not discovered any pending issues with this assignment. 
 Everything is running as I expect it to.
