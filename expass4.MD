@@ -13,6 +13,8 @@ to run the program, where I forgot to initialize the Collections which led to Nu
 I also had some problem running the tests because it failed when trying to assert that a
 Collection contained a certain item. This is because it was comparing a mutable list with an immutable list. 
 I fixed this by changing the test (hope that's okay) by asserting that the ArrayList contained the item.  
+  
+You can find the code to the project [here](https://github.com/andreashenriksen/dat250-jpa-tutorial).
 
 ## Database inspection
 I inspected the database by using IntelliJ's plugin called **Database tools and SQL**.
