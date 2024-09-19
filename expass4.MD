@@ -26,7 +26,7 @@ This is the result when I ran the query to show all tables.
 ![All tables](all_tables.png)  
 
 Below is the schema for the generated database.
-```h2
+```sql
 -- we don't know how to generate root <with-no-name> (class Root) :(
 
 create table ADDRESS
