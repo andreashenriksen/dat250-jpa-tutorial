@@ -1,6 +1,6 @@
 # Assignment 4 - JPA
 
-[![Experiment 2 tests](.github/workflows/main.yml/badge.svg)](.github/workflows/main.yml)
+[![Experiment 2 tests](../../actions/workflows/main.yml/badge.svg)](../../actions/workflows/main.yml)
 
 ## Table of Content
 - [JPA Installation](#jpa-installation)
