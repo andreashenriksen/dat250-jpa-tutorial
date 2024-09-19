@@ -2,35 +2,65 @@ package no.hvl.dat250.jpa.tutorial.creditcards;
 
 import jakarta.persistence.*;
 
+import java.util.ArrayList;
+import java.util.Collection;
+
 @Entity
 public class CreditCard {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+    private Integer number;
+    private Integer creditLimit;
+    private Integer balance;
 
-    public Integer getNumber() {
-        // TODO: implement method!
-        return null;
+    @ManyToOne
+    private Bank bank;
+
+    @ManyToOne
+    private Pincode pincode;
+
+    @ManyToMany(mappedBy = "creditCards")
+    Collection<Customer> owners = new ArrayList<>();
+
+    public CreditCard() {}
+
+    public CreditCard(Integer number, Integer creditLimit, Integer balance) {
+        this.number = number;
+        this.creditLimit = creditLimit;
+        this.balance = balance;
     }
 
-    public Integer getBalance() {
-        // TODO: implement method!
-        return null;
+    public Integer getNumber() {
+        return number;
     }
 
     public Integer getCreditLimit() {
-        // TODO: implement method!
-        return null;
+        return creditLimit;
     }
 
-    public Pincode getPincode() {
-        // TODO: implement method!
-        return null;
+    public Integer getBalance() {
+        return balance;
     }
 
     public Bank getOwningBank() {
-        // TODO: implement method!
-        return null;
+        return bank;
+    }
+
+    public void setOwningBank(Bank bank) {
+        this.bank = bank;
+    }
+
+    public Pincode getPincode() {
+        return pincode;
+    }
+
+    public void setPincode(Pincode pincode) {
+        this.pincode = pincode;
+    }
+
+    public Collection<Customer> getOwners() {
+        return owners;
     }
 }
